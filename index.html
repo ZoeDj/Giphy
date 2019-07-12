@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy</title>
+    <link rel="stylesheet"  href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+            <h1>GIPHY EMOTIONS</h1>
+    <!-- Rendered buttons will get placed here  -->
+    <div id="buttons-disply"></div><br>
+    <br>
+    <form id="emotions-form">
+            <label for="emotion-input">How do you feel today?</label>
+            <input type="text" id="emotion-input">
+            <br>
+            <!-- Button triggers new emotion to be added -->
+            <input id="add-emotion" type="submit" value="Add an Emotion">
+            <br>
+          </form>
+          <div id="emotion-disply"></div>
+    </div>
+  <script src="assets/javascript/giphy.js"></script>  
+</body>
+</html>
+
+
