@@ -1,12 +1,13 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background: #bb737f78;
+    background: #18181a;
+    color: white;
 }
 button.emotion-btn{
     margin: 10px;
     padding: 10px;
-    background: #bf586a;
+    background: #93f;
     border: none;
     color: white;
     font-size: 16px;
@@ -14,7 +15,7 @@ button.emotion-btn{
     text-transform: uppercase;
 }
 button.emotion-btn:hover{
-    background: #944452;
+    background: #ff6666;;
 }
 button.emotion-btn:active{
     border: none;
@@ -22,7 +23,7 @@ button.emotion-btn:active{
 #add-emotion{
     margin: 8px;
     padding: 8px;
-    background: #944452;
+    background: #ff6666;  
     border: none;
     color: white;
     font-size: 12px;
@@ -30,7 +31,7 @@ button.emotion-btn:active{
     text-transform: uppercase; 
 }
 #add-emotion:hover{
-    background: #bf586a;  
+    background: #93f;  
 }
 label{
     font-size: 20px;
@@ -39,4 +40,7 @@ label{
 }
 #emotion-input{
     font-size: 20px;
+}
+h1{
+    color: #0f9; 
 }
