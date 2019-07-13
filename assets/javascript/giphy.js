@@ -16,7 +16,7 @@ function displayGifs() {
       var results = response.data;
 
 
-    // Looping through array of emotions 
+    // Looping through array of results 
       for (var i = 0; i < results.length; i++) {
     
       var emotionDiv = $("<div>");
@@ -30,13 +30,12 @@ function displayGifs() {
         gifImg.attr("data-still", results[i].images.fixed_height_still.url);
         gifImg.attr("data-animate", results[i].images.fixed_height.url);
       
-      emotionDiv.html(gifImg);
-
+      
       var gifRating = $("<p>");
         gifRating.text("Rating: " + results[i].rating);
 
+      emotionDiv.html(gifImg);
       emotionDiv.prepend(gifRating);
-
       $("#emotion-disply").prepend(emotionDiv);
       }
     })
@@ -44,7 +43,8 @@ function displayGifs() {
 
 
 function renderButtons() {
-    $("#buttons-disply").empty();
+  // Deleting the buttons prior to adding new ones
+  $("#buttons-disply").empty();
 
 // Looping through the array and generating buttons for each emotion in the array
 for (i = 0; i < emotions.length; i++){
@@ -74,8 +74,8 @@ $("#add-emotion").on("click", function(event) {
    
     var state = $(this).attr("data-state");
     
-    // When the user clicks one of the still GIPHY images, the gif should animate. 
-    //If the user clicks the gif again, it should stop playing.
+    // When the user clicks one of the still GIPHY images, the gif animates. 
+    //If the user clicks the gif again, it stops playing.
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");
