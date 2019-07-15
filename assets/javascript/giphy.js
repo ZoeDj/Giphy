@@ -30,15 +30,15 @@ function displayGifs() {
         gifImg.attr("data-still", results[i].images.fixed_height_still.url);
         gifImg.attr("data-animate", results[i].images.fixed_height.url);
       
-      var title = $("<p class='title'>")
-        title.text("Title: " + results[i].title);
+      var gifTitle = $("<p class='title'>")
+        gifTitle.text("Title: " + results[i].title);
 
       var gifRating = $("<p class='rating'>");
         gifRating.text("Rating: " + results[i].rating);
 
       emotionDiv.html(gifImg);
       emotionDiv.append(gifRating);
-      gifRating.prepend(title);
+      gifRating.prepend(gifTitle);
       $("#emotion-disply").prepend(emotionDiv);
       }
     })
@@ -71,7 +71,6 @@ $("#add-emotion").on("click", function(event) {
 
  // Function for displaying the gifs
   $(document).on("click", ".emotion-btn", displayGifs);
-
 
   $(document).on("click",".gif", function() {
    
