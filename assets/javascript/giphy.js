@@ -69,6 +69,7 @@ $("#add-emotion").on("click", function(event) {
     renderButtons();
   });
 
+
  // Function for displaying the gifs
   $(document).on("click", ".emotion-btn", displayGifs);
 
